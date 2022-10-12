@@ -1,0 +1,10 @@
+robot
+teach
+south
+torture
+loud
+technique
+definite
+grandfather
+pin
+random
