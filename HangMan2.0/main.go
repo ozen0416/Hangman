@@ -23,6 +23,7 @@ func main() {
 	for scanner.Scan() {
 		tmp = append(tmp, scanner.Text())
 	}
+
 	found := []string{}
 	for i := 0; i < len(tmp); i++ {
 		found = append(found, "_")
@@ -58,6 +59,12 @@ func GetLetter(found string) (string, error) {
 	return letter, nil
 }
 
+func GetWord(guess string) {
+	var word []string
+	letter := ""
+
+}
+
 func Join(strings []string, separator string) string {
 	if len(strings) == 0 {
 		return ""
@@ -68,4 +75,16 @@ func Join(strings []string, separator string) string {
 		s += string(v) + separator
 	}
 	return s + strings[index]
+}
+
+func ContainsAny(s string, chars []string) bool {
+	for _, ch := range s {
+		for _, ch2 := range chars {
+			if string(ch) == ch2 {
+				return true
+			}
+
+		}
+	}
+	return false
 }
